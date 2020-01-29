@@ -27,3 +27,6 @@ EOF
    13  systemctl daemon-reload
    14  systemctl restart kubelet
    15  history
+   hostnamectl set-hostname --static k8master
+   13  vi /etc/cloud/cloud.cfg
+   preserve_hostname: true
