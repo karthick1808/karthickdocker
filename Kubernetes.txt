@@ -34,3 +34,7 @@ hostnamectl set-hostname --static k8master
 =========================================================================================
 vi /etc/cloud/cloud.cfg
 preserve_hostname: true
+=========================================================================================
+# Disable RAM Swap - can set to 0 on certain Linux distro
+sudo sysctl vm.swappiness=1
+echo 'vm.swappiness=1' | sudo tee --append /etc/sysctl.conf
